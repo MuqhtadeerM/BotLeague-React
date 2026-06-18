@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
           <img
             src="/arena-battle.png"
             alt="Robot Battle Arena"
-            className="w-full h-full object-cover"
+            className="object-cover w-full h-full"
             style={{
               objectPosition: "center center",
             }}
@@ -68,14 +68,14 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-20 h-full w-full">
+      <div className="relative z-20 w-full h-full">
         {/* Live Badge */}
-        <div className="absolute top-[26px] right-[160px] flex items-center gap-3 bg-[#111111]/90 border border-[#2A2A2A] rounded px-4 py-2">
+        <div className="absolute top-[120px] right-[160px] flex items-center gap-3 bg-[#111111]/90 border border-[#2A2A2A] rounded px-4 py-2">
           <Radio size={12} className="text-[#E8192C] fill-[#E8192C]" />
 
           <span className="text-[#E8192C] text-sm font-medium">LIVE :</span>
 
-          <span className="text-white text-sm">
+          <span className="text-sm text-white">
             Episode 14 · Bengaluru Regionals
           </span>
 
@@ -85,7 +85,7 @@ const Hero: React.FC = () => {
         </div>
 
         {/* Hero Text */}
-        <div className="absolute left-[81px] top-[145px]">
+        <div className="absolute left-[81px] top-[245px]">
           <h1
             className="
               font-display
@@ -109,9 +109,9 @@ const Hero: React.FC = () => {
           <p
             className="mt-5 text-white font-body"
             style={{
-              width: "427px",
+              width: "480px",
               fontSize: "28px",
-              fontWeight: 500,
+              fontWeight: 300,
               lineHeight: "100%",
             }}
           >

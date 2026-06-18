@@ -8,9 +8,9 @@ const Navbar: React.FC = () => {
   const [active, setActive] = useState("Events");
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0d0d0d]">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-black">
       <div
-        className="w-full flex items-center relative"
+        className="relative flex items-center w-full"
         style={{
           height: "90px",
           paddingLeft: "37px",
@@ -18,22 +18,39 @@ const Navbar: React.FC = () => {
         }}
       >
         {/* Logo */}
-        <a href="/" className="flex items-center pr-[48px]">
+        <a
+          href="/"
+          className="absolute flex items-center"
+          style={{
+            left: "27px",
+            top: "26px",
+            width: "290px",
+            height: "58px",
+          }}
+        >
           <img
             src="/botleague-logo.png"
             alt="BotLeague"
-            className="h-8 w-auto object-contain"
+            className="object-contain w-full h-full"
           />
         </a>
 
         {/* Desktop Nav Links */}
-        <div className="hidden md:flex items-stretch ml-[40px] gap-[32px]">
+        <div
+          className="absolute items-center justify-between hidden md:flex"
+          style={{
+            width: "617px",
+            left: "450px",
+            top: "38px",
+            height: "25px",
+          }}
+        >
           {navLinks.map((item) => (
             <a
               key={item}
               href="#"
               onClick={() => setActive(item)}
-              className="relative flex items-centerjustify-center w-[102px] text-[#F5F5F5] hover:text-white font-display font-medium text-[18px] leading-[100%] tracking-[0.02em] transition-all duration-200"
+              className="relative flex items-center justify-center w-[110px] text-[#F5F5F5] hover:text-white font-display font-medium text-[18px] leading-[100%] tracking-[0.02em] transition-all duration-200"
             >
               {item}
               {/* Red underline for active item */}
@@ -41,7 +58,7 @@ const Navbar: React.FC = () => {
                 <span
                   className="
                 absolute
-                bottom-0
+                -bottom-9
                 left-1/2
                 -translate-x-1/2
                 w-[102px]
@@ -58,18 +75,51 @@ const Navbar: React.FC = () => {
         <div className="flex-1" />
 
         {/* CTA Buttons */}
-        <div className="hidden md:flex items-center gap-3">
-          <button className="border border-[#555] text-[#f0f0f0] px-6 py-2 text-sm font-display font-semibold tracking-wider hover:border-white hover:text-white transition-colors duration-150 rounded-sm">
+        <div className="items-center hidden gap-3 md:flex">
+          <button
+            className="
+              border
+              border-[#666]
+              text-white
+              rounded-[8px]
+              font-body
+              font-semibold
+              text-[18px]
+              flex
+              items-center
+              justify-center
+            "
+            style={{
+              width: "113px",
+              height: "43px",
+            }}
+          >
             LOGIN
           </button>
-          <button className="bg-[#e8192c] text-white px-6 py-2 text-sm font-display font-semibold tracking-wider hover:bg-[#c01020] transition-colors duration-150 rounded-sm">
+          <button
+            className="
+                bg-[#FF4D57]
+                text-white
+                rounded-[8px]
+                font-body
+                font-semibold
+                text-[18px]
+                flex
+                items-center
+                justify-center
+              "
+            style={{
+              width: "163px",
+              height: "43px",
+            }}
+          >
             REGISTER NOW
           </button>
         </div>
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden text-white flex items-center"
+          className="flex items-center text-white md:hidden"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           {menuOpen ? <X size={24} /> : <Menu size={24} />}

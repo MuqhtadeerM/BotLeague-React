@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import CompetitionsEvents from "./components/CompetitionsEvents";
 import UserJourney from "./components/UserJourney";
+import WhatIsBotLeague from "./components/WhatIsBotLeague";
 
 const App: React.FC = () => {
   return (
@@ -11,15 +12,16 @@ const App: React.FC = () => {
       <Hero />
       <CompetitionsEvents />
       <UserJourney />
+      <WhatIsBotLeague />
 
       {/* Footer */}
       <footer className="bg-[#0a0a0a] border-t border-[#1a1a1a] py-8 px-6">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="flex flex-col items-center justify-between gap-4 mx-auto max-w-7xl md:flex-row">
           <div className="flex items-center gap-2">
             <div className="bg-[#e8192c] text-white font-display font-bold text-sm px-1.5 py-0.5 rounded-sm">
               B⚡T
             </div>
-            <span className="font-display font-bold text-white tracking-widest uppercase text-sm">
+            <span className="text-sm font-bold tracking-widest text-white uppercase font-display">
               League
             </span>
           </div>
