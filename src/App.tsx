@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import CompetitionsEvents from "./components/CompetitionsEvents";
+import UserJourney from "./components/UserJourney";
+import WhatIsBotLeague from "./components/WhatIsBotLeague";
+import Categories from "./components/Categories";
+import CompetitionDisciplines from "./components/CompetitionDisciplines";
+import LeagueAdvantage from "./components/Leagueadvantage";
+import JoinEcosystem from "./components/Joinecosystem";
+import Footer from "./components/Footer";
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="min-h-screen bg-[#0a0a0a] font-body">
+      <Navbar />
+      <Hero />
+      <CompetitionsEvents />
+      <UserJourney />
+      <WhatIsBotLeague />
+      <Categories />
+      <CompetitionDisciplines />
+      <LeagueAdvantage />
+      <JoinEcosystem />
+
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;
