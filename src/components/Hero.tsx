@@ -6,7 +6,7 @@ const Hero: React.FC = () => {
     <section
       className="relative overflow-hidden bg-[#0A0A0A]"
       style={{
-        height: "621px",
+        height: "701px",
       }}
     >
       {/* Background */}
@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
           className="absolute top-0 right-0"
           style={{
             width: "1077px",
-            height: "621px",
+            height: "701px",
           }}
         >
           <img

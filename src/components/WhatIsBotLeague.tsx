@@ -1,5 +1,4 @@
 import React from "react";
-import { ClipboardList, Trophy, Briefcase, Cog } from "lucide-react";
 
 const features = [
   {
