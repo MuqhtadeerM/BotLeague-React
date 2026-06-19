@@ -78,7 +78,7 @@ const Footer: React.FC = () => {
                 {quickLinksCol1.map((link) => (
                   <li key={link}>
                     <a
-                      href="#"
+                      href="/"
                       className="transition-colors duration-150 hover:text-white"
                       style={{
                         fontFamily: "'Inter', sans-serif",
@@ -95,7 +95,7 @@ const Footer: React.FC = () => {
                 {quickLinksCol2.map((link) => (
                   <li key={link}>
                     <a
-                      href="#"
+                      href="/"
                       className="transition-colors duration-150 hover:text-white"
                       style={{
                         fontFamily: "'Inter', sans-serif",

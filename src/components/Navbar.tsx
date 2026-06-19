@@ -46,28 +46,28 @@ const Navbar: React.FC = () => {
           }}
         >
           {navLinks.map((item) => (
-            <a
+            <button
               key={item}
-              href="#"
+              type="button"
               onClick={() => setActive(item)}
               className="relative flex items-center justify-center w-[110px] text-[#F5F5F5] hover:text-white font-display font-medium text-[18px] leading-[100%] tracking-[0.02em] transition-all duration-200"
             >
               {item}
-              {/* Red underline for active item */}
+
               {active === item && (
                 <span
                   className="
-                absolute
-                -bottom-9
-                left-1/2
-                -translate-x-1/2
-                w-[102px]
-                h-[4px]
-                bg-[#FF4D57]
-                "
+                    absolute
+                    -bottom-9
+                    left-1/2
+                    -translate-x-1/2
+                    w-[102px]
+                    h-[4px]
+                    bg-[#FF4D57]
+                  "
                 />
               )}
-            </a>
+            </button>
           ))}
         </div>
 
@@ -96,18 +96,19 @@ const Navbar: React.FC = () => {
           >
             LOGIN
           </button>
+
           <button
             className="
-                bg-[#FF4D57]
-                text-white
-                rounded-[8px]
-                font-body
-                font-semibold
-                text-[18px]
-                flex
-                items-center
-                justify-center
-              "
+              bg-[#FF4D57]
+              text-white
+              rounded-[8px]
+              font-body
+              font-semibold
+              text-[18px]
+              flex
+              items-center
+              justify-center
+            "
             style={{
               width: "163px",
               height: "43px",
@@ -117,8 +118,9 @@ const Navbar: React.FC = () => {
           </button>
         </div>
 
-        {/* Mobile toggle */}
+        {/* Mobile Toggle */}
         <button
+          type="button"
           className="flex items-center text-white md:hidden"
           onClick={() => setMenuOpen(!menuOpen)}
         >
@@ -126,23 +128,30 @@ const Navbar: React.FC = () => {
         </button>
       </div>
 
-      {/* Mobile dropdown */}
+      {/* Mobile Dropdown */}
       {menuOpen && (
-        <div className="md:hidden bg-[#0d0d0d] border-t border-[#222] px-6 py-4 flex flex-col gap-4">
+        <div className="flex flex-col gap-4 px-6 py-4 border-t md:hidden bg-[#0d0d0d] border-[#222]">
           {navLinks.map((item) => (
-            <a
+            <button
               key={item}
-              href="#"
-              onClick={() => setActive(item)}
-              className={`font-body text-sm ${active === item ? "text-[#e8192c]" : "text-[#f0f0f0]"}`}
+              type="button"
+              onClick={() => {
+                setActive(item);
+                setMenuOpen(false);
+              }}
+              className={`text-left font-body text-sm ${
+                active === item ? "text-[#e8192c]" : "text-[#f0f0f0]"
+              }`}
             >
               {item}
-            </a>
+            </button>
           ))}
-          <button className="border border-[#555] text-[#f0f0f0] px-5 py-2 text-sm font-display font-semibold tracking-wider w-full rounded-sm">
+
+          <button className="w-full px-5 py-2 text-sm border rounded-sm border-[#555] text-[#f0f0f0] font-display font-semibold tracking-wider">
             LOGIN
           </button>
-          <button className="bg-[#e8192c] text-white px-5 py-2 text-sm font-display font-semibold tracking-wider w-full rounded-sm">
+
+          <button className="w-full px-5 py-2 text-sm text-white rounded-sm bg-[#e8192c] font-display font-semibold tracking-wider">
             REGISTER NOW
           </button>
         </div>
